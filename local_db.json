@@ -1,0 +1,833 @@
+{
+  "users": [
+    {
+      "id": "usr_admin",
+      "email": "admin@nexus.com",
+      "role": "admin",
+      "createdAt": "2026-07-07T17:39:35.336Z"
+    },
+    {
+      "id": "usr_investor_1",
+      "email": "investor@nexus.com",
+      "role": "investor",
+      "createdAt": "2026-07-07T17:39:35.336Z"
+    },
+    {
+      "id": "usr_investor_2",
+      "email": "samantha@vanguard.vc",
+      "role": "investor",
+      "createdAt": "2026-07-07T17:39:35.336Z"
+    },
+    {
+      "id": "usr_entrepreneur_1",
+      "email": "entrepreneur@nexus.com",
+      "role": "entrepreneur",
+      "createdAt": "2026-07-07T17:39:35.336Z"
+    },
+    {
+      "id": "usr_entrepreneur_2",
+      "email": "david@greengrid.io",
+      "role": "entrepreneur",
+      "createdAt": "2026-07-07T17:39:35.336Z"
+    },
+    {
+      "id": "usr_f2e909a3-eef2-4b4a-8223-02cb08fb2209",
+      "email": "founder_1783446161433@nexus-test.com",
+      "role": "entrepreneur",
+      "createdAt": "2026-07-07T17:42:41.507Z"
+    },
+    {
+      "id": "usr_0edb9922-27bf-415d-afe1-d195594d6e2d",
+      "email": "founder_1783536146538@nexus-test.com",
+      "role": "entrepreneur",
+      "createdAt": "2026-07-08T18:42:26.739Z"
+    },
+    {
+      "id": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "email": "imratanveer21@gmail.com",
+      "role": "entrepreneur",
+      "createdAt": "2026-07-08T18:43:31.524Z"
+    },
+    {
+      "id": "usr_46d58539-e277-4e2e-a082-fb8f05419fd8",
+      "email": "founder_1783609440222@nexus-test.com",
+      "role": "entrepreneur",
+      "createdAt": "2026-07-09T15:04:00.279Z"
+    },
+    {
+      "id": "usr_2f304630-0a32-48eb-b8ba-558502a46af2",
+      "email": "iza@gmail.com",
+      "role": "entrepreneur",
+      "createdAt": "2026-07-09T15:20:33.854Z"
+    },
+    {
+      "id": "usr_3d96e969-43ef-4a66-9bf7-37708894e4aa",
+      "email": "imra@test.com",
+      "role": "entrepreneur",
+      "createdAt": "2026-07-09T15:21:42.923Z"
+    }
+  ],
+  "passwords": {
+    "usr_admin": "ea0370a0a63aef16f209938cab20bc0faea4c36d6daf89d88c62c0dcd22818c8",
+    "usr_investor_1": "ea0370a0a63aef16f209938cab20bc0faea4c36d6daf89d88c62c0dcd22818c8",
+    "usr_investor_2": "ea0370a0a63aef16f209938cab20bc0faea4c36d6daf89d88c62c0dcd22818c8",
+    "usr_entrepreneur_1": "ea0370a0a63aef16f209938cab20bc0faea4c36d6daf89d88c62c0dcd22818c8",
+    "usr_entrepreneur_2": "ea0370a0a63aef16f209938cab20bc0faea4c36d6daf89d88c62c0dcd22818c8",
+    "usr_f2e909a3-eef2-4b4a-8223-02cb08fb2209": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "usr_0edb9922-27bf-415d-afe1-d195594d6e2d": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "usr_e688e912-6f73-44dd-87d4-72fba611d12c": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    "usr_46d58539-e277-4e2e-a082-fb8f05419fd8": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "usr_2f304630-0a32-48eb-b8ba-558502a46af2": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "usr_3d96e969-43ef-4a66-9bf7-37708894e4aa": "54de7f606f2523cba8efac173fab42fb7f59d56ceff974c8fdb7342cf2cfe345"
+  },
+  "profiles": [
+    {
+      "userId": "usr_admin",
+      "name": "Nexus Admin Team",
+      "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&q=80",
+      "bio": "General administrator account for platform management and compliance.",
+      "industry": "Software",
+      "skills": [
+        "Operations",
+        "Security",
+        "Compliance"
+      ],
+      "experience": "10 years running startup ecosystems",
+      "experiences": []
+    },
+    {
+      "userId": "usr_investor_1",
+      "name": "Marcus Sterling",
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80",
+      "bio": "Managing Partner at Sterling Ventures. Focused on early-stage enterprise software and artificial intelligence.",
+      "industry": "Artificial Intelligence",
+      "skills": [
+        "Venture Capital",
+        "SaaS Scaling",
+        "Product Strategy",
+        "M&A"
+      ],
+      "experience": "15 years VC and ex-Google Product Lead",
+      "experiences": [
+        {
+          "id": "exp_1",
+          "title": "Managing Partner",
+          "company": "Sterling Ventures",
+          "years": 8
+        },
+        {
+          "id": "exp_2",
+          "title": "Product Director",
+          "company": "Google Cloud AI",
+          "years": 7
+        }
+      ],
+      "totalInvested": 24500000,
+      "investmentsCount": 18,
+      "preferredStages": [
+        "Seed",
+        "Series A"
+      ],
+      "preferredIndustries": [
+        "Artificial Intelligence",
+        "SaaS",
+        "Fintech",
+        "Cybersecurity"
+      ],
+      "ticketSizeMin": 250000,
+      "ticketSizeMax": 2000000
+    },
+    {
+      "userId": "usr_investor_2",
+      "name": "Samantha Chen",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
+      "bio": "GP at Vanguard BioTech & Health. Investing in the future of life sciences, remote diagnostics, and digital health.",
+      "industry": "Healthcare & Life Sciences",
+      "skills": [
+        "Biomedical Engineering",
+        "Clinical Trial Strategy",
+        "FDA Approvals",
+        "Venture Capital"
+      ],
+      "experience": "12 years healthcare investment practitioner",
+      "experiences": [
+        {
+          "id": "exp_3",
+          "title": "General Partner",
+          "company": "Vanguard Health",
+          "years": 6
+        },
+        {
+          "id": "exp_4",
+          "title": "Senior Associate",
+          "company": "OrbiMed",
+          "years": 6
+        }
+      ],
+      "totalInvested": 18000000,
+      "investmentsCount": 11,
+      "preferredStages": [
+        "Series A",
+        "Series B"
+      ],
+      "preferredIndustries": [
+        "Healthcare & Life Sciences",
+        "Deeptech",
+        "SaaS"
+      ],
+      "ticketSizeMin": 500000,
+      "ticketSizeMax": 3000000
+    },
+    {
+      "userId": "usr_entrepreneur_1",
+      "name": "Alex Rivera",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+      "bio": "Founder & CEO of OmniMind AI. Building localized, super-efficient LLM orchestrators that run inside secure enterprise perimeters.",
+      "industry": "Artificial Intelligence",
+      "skills": [
+        "Machine Learning",
+        "Docker",
+        "Kubernetes",
+        "Enterprise Sales",
+        "Team Building"
+      ],
+      "experience": "7 years ML Engineering at Apple and Meta",
+      "experiences": [
+        {
+          "id": "exp_5",
+          "title": "Founder & CEO",
+          "company": "OmniMind AI",
+          "years": 2
+        },
+        {
+          "id": "exp_6",
+          "title": "Senior ML Engineer",
+          "company": "Apple AI Group",
+          "years": 5
+        }
+      ],
+      "startupName": "OmniMind AI",
+      "startupDescription": "OmniMind delivers secure, private, and localized generative AI orchestrators designed exclusively for healthcare, finance, and defense industries.",
+      "pitchDeckUrl": "OmniMind_PitchDeck_Q3_2026.pdf",
+      "fundingStage": "Seed",
+      "fundingGoal": 1500000,
+      "fundingRaised": 450000
+    },
+    {
+      "userId": "usr_entrepreneur_2",
+      "name": "David Kojo",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      "bio": "Founder of GreenGrid. Building next-generation micro-grid analytics powered by smart contracts to balance clean energy distribution.",
+      "industry": "ClimateTech",
+      "skills": [
+        "Smart Grids",
+        "Renewable Energy",
+        "Solidity",
+        "Go",
+        "IoT Systems"
+      ],
+      "experience": "8 years systems engineer",
+      "experiences": [
+        {
+          "id": "exp_7",
+          "title": "Founder",
+          "company": "GreenGrid.io",
+          "years": 3
+        },
+        {
+          "id": "exp_8",
+          "title": "Principal Grid Analyst",
+          "company": "Tesla Energy",
+          "years": 5
+        }
+      ],
+      "startupName": "GreenGrid.io",
+      "startupDescription": "GreenGrid optimizes clean power distribution on localized smart grids through autonomous IoT power routers and blockchain ledger validation.",
+      "pitchDeckUrl": "GreenGrid_ExecutiveSummary.pdf",
+      "fundingStage": "Pre-Seed",
+      "fundingGoal": 750000,
+      "fundingRaised": 120000
+    },
+    {
+      "userId": "usr_f2e909a3-eef2-4b4a-8223-02cb08fb2209",
+      "name": "Test Founder",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Test%20Founder",
+      "bio": "A premium entrepreneur looking to build future-defining ventures on Nexus.",
+      "industry": "Fintech",
+      "skills": [],
+      "experience": "New to the platform",
+      "experiences": [],
+      "startupName": "Test Founder's Venture",
+      "startupDescription": "A newly registered startup on Nexus.",
+      "fundingStage": "Pre-Seed",
+      "fundingGoal": 500000,
+      "fundingRaised": 0
+    },
+    {
+      "userId": "usr_0edb9922-27bf-415d-afe1-d195594d6e2d",
+      "name": "Test Founder",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Test%20Founder",
+      "bio": "A premium entrepreneur looking to build future-defining ventures on Nexus.",
+      "industry": "Fintech",
+      "skills": [],
+      "experience": "New to the platform",
+      "experiences": [],
+      "startupName": "Test Founder's Venture",
+      "startupDescription": "A newly registered startup on Nexus.",
+      "fundingStage": "Pre-Seed",
+      "fundingGoal": 500000,
+      "fundingRaised": 0
+    },
+    {
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "name": "imra",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=imra",
+      "bio": "A premium entrepreneur looking to build future-defining ventures on Nexus.",
+      "industry": "Artificial Intelligence",
+      "skills": [],
+      "experience": "New to the platform",
+      "experiences": [],
+      "startupName": "imra's Venture",
+      "startupDescription": "A newly registered startup on Nexus.",
+      "fundingStage": "Pre-Seed",
+      "fundingGoal": 500000,
+      "fundingRaised": 0
+    },
+    {
+      "userId": "usr_46d58539-e277-4e2e-a082-fb8f05419fd8",
+      "name": "Test Founder",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Test%20Founder",
+      "bio": "A premium entrepreneur looking to build future-defining ventures on Nexus.",
+      "industry": "Fintech",
+      "skills": [],
+      "experience": "New to the platform",
+      "experiences": [],
+      "startupName": "Test Founder's Venture",
+      "startupDescription": "A newly registered startup on Nexus.",
+      "fundingStage": "Pre-Seed",
+      "fundingGoal": 500000,
+      "fundingRaised": 0
+    },
+    {
+      "userId": "usr_2f304630-0a32-48eb-b8ba-558502a46af2",
+      "name": "iza",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=iza",
+      "bio": "A premium entrepreneur looking to build future-defining ventures on Nexus.",
+      "industry": "Artificial Intelligence",
+      "skills": [],
+      "experience": "New to the platform",
+      "experiences": [],
+      "startupName": "iza's Venture",
+      "startupDescription": "A newly registered startup on Nexus.",
+      "fundingStage": "Pre-Seed",
+      "fundingGoal": 500000,
+      "fundingRaised": 0
+    },
+    {
+      "userId": "usr_3d96e969-43ef-4a66-9bf7-37708894e4aa",
+      "name": "Imra",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Imra",
+      "bio": "A premium entrepreneur looking to build future-defining ventures on Nexus.",
+      "industry": "Technology",
+      "skills": [],
+      "experience": "New to the platform",
+      "experiences": [],
+      "startupName": "Imra's Venture",
+      "startupDescription": "A newly registered startup on Nexus.",
+      "fundingStage": "Pre-Seed",
+      "fundingGoal": 500000,
+      "fundingRaised": 0
+    }
+  ],
+  "meetings": [],
+  "documents": [
+    {
+      "id": "doc_1",
+      "userId": "usr_entrepreneur_1",
+      "userName": "Alex Rivera (OmniMind AI)",
+      "title": "OmniMind_PitchDeck_Q3_2026.pdf",
+      "description": "Main Series Seed pitch deck illustrating product architecture, pricing model, and enterprise market traction.",
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+      "category": "pitch_deck",
+      "approvalStatus": "approved",
+      "electronicSignatures": [],
+      "versions": [
+        {
+          "version": 1,
+          "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+          "uploadedAt": "2026-07-07T17:39:35.337Z",
+          "uploadedBy": "Alex Rivera"
+        }
+      ],
+      "createdAt": "2026-07-07T17:39:35.337Z"
+    }
+  ],
+  "wallets": [
+    {
+      "userId": "usr_admin",
+      "balance": 0,
+      "currency": "USD",
+      "updatedAt": "2026-07-07T17:39:35.337Z"
+    },
+    {
+      "userId": "usr_investor_1",
+      "balance": 5000000,
+      "currency": "USD",
+      "updatedAt": "2026-07-07T17:39:35.337Z"
+    },
+    {
+      "userId": "usr_investor_2",
+      "balance": 8000000,
+      "currency": "USD",
+      "updatedAt": "2026-07-07T17:39:35.337Z"
+    },
+    {
+      "userId": "usr_entrepreneur_1",
+      "balance": 450000,
+      "currency": "USD",
+      "updatedAt": "2026-07-07T17:39:35.337Z"
+    },
+    {
+      "userId": "usr_entrepreneur_2",
+      "balance": 120000,
+      "currency": "USD",
+      "updatedAt": "2026-07-07T17:39:35.337Z"
+    },
+    {
+      "userId": "usr_f2e909a3-eef2-4b4a-8223-02cb08fb2209",
+      "balance": 25000,
+      "currency": "USD",
+      "updatedAt": "2026-07-07T17:42:41.507Z"
+    },
+    {
+      "userId": "usr_0edb9922-27bf-415d-afe1-d195594d6e2d",
+      "balance": 25000,
+      "currency": "USD",
+      "updatedAt": "2026-07-08T18:42:26.739Z"
+    },
+    {
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "balance": 25000,
+      "currency": "USD",
+      "updatedAt": "2026-07-08T18:43:31.524Z"
+    },
+    {
+      "userId": "usr_46d58539-e277-4e2e-a082-fb8f05419fd8",
+      "balance": 25000,
+      "currency": "USD",
+      "updatedAt": "2026-07-09T15:04:00.279Z"
+    },
+    {
+      "userId": "usr_2f304630-0a32-48eb-b8ba-558502a46af2",
+      "balance": 25000,
+      "currency": "USD",
+      "updatedAt": "2026-07-09T15:20:33.854Z"
+    },
+    {
+      "userId": "usr_3d96e969-43ef-4a66-9bf7-37708894e4aa",
+      "balance": 25000,
+      "currency": "USD",
+      "updatedAt": "2026-07-09T15:21:42.923Z"
+    }
+  ],
+  "transactions": [],
+  "notifications": [
+    {
+      "id": "not_a577f36d-4d9f-4b45-bfaf-dce22aa59a1a",
+      "userId": "usr_3d96e969-43ef-4a66-9bf7-37708894e4aa",
+      "title": "Welcome to Nexus!",
+      "message": "Your full-featured entrepreneur workspace is ready. Click Dashboard to begin!",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-07-09T15:21:42.951Z"
+    },
+    {
+      "id": "not_6a62644a-c221-40ce-96a3-91d56f09a64c",
+      "userId": "usr_2f304630-0a32-48eb-b8ba-558502a46af2",
+      "title": "Welcome to Nexus!",
+      "message": "Your full-featured entrepreneur workspace is ready. Click Dashboard to begin!",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-07-09T15:20:33.908Z"
+    },
+    {
+      "id": "not_30674ae4-638c-4cdd-aa60-1c594210b518",
+      "userId": "usr_46d58539-e277-4e2e-a082-fb8f05419fd8",
+      "title": "Welcome to Nexus!",
+      "message": "Your full-featured entrepreneur workspace is ready. Click Dashboard to begin!",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-07-09T15:04:00.280Z"
+    },
+    {
+      "id": "not_e358ca2f-1086-4c88-b616-687b6dbe6482",
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "title": "Welcome to Nexus!",
+      "message": "Your full-featured entrepreneur workspace is ready. Click Dashboard to begin!",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-07-08T18:43:31.573Z"
+    },
+    {
+      "id": "not_a4c0a14a-046e-44df-a470-d068ee9113b9",
+      "userId": "usr_0edb9922-27bf-415d-afe1-d195594d6e2d",
+      "title": "Welcome to Nexus!",
+      "message": "Your full-featured entrepreneur workspace is ready. Click Dashboard to begin!",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-07-08T18:42:26.788Z"
+    },
+    {
+      "id": "not_78749871-8910-4f9a-aaac-b8111df02090",
+      "userId": "usr_f2e909a3-eef2-4b4a-8223-02cb08fb2209",
+      "title": "Welcome to Nexus!",
+      "message": "Your full-featured entrepreneur workspace is ready. Click Dashboard to begin!",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-07-07T17:42:41.508Z"
+    },
+    {
+      "id": "not_1",
+      "userId": "usr_investor_1",
+      "title": "Welcome to Nexus!",
+      "message": "Explore early-stage startups matching your AI preferences, and use the integrated calendar to schedule meetings directly.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-07-07T17:39:35.337Z"
+    },
+    {
+      "id": "not_2",
+      "userId": "usr_entrepreneur_1",
+      "title": "Welcome to Nexus!",
+      "message": "Upload your Pitch Deck and Financials to your Document Chamber, and use the AI Matchmaker to analyze your pitch alignment.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-07-07T17:39:35.337Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_1",
+      "senderId": "usr_entrepreneur_1",
+      "receiverId": "usr_investor_1",
+      "content": "Hi Marcus, I saw your investment focus on secure enterprise AI systems. I would love for you to review OmniMind AI.",
+      "createdAt": "2026-07-07T15:39:35.337Z"
+    },
+    {
+      "id": "msg_2",
+      "senderId": "usr_investor_1",
+      "receiverId": "usr_entrepreneur_1",
+      "content": "Hello Alex, that sounds highly relevant to our recent thesis. Please upload your pitch deck to the Document Chamber here so I can take a look.",
+      "createdAt": "2026-07-07T16:39:35.337Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud_2eda4800-0230-4cae-b01a-e16d6d970731",
+      "userId": "usr_3d96e969-43ef-4a66-9bf7-37708894e4aa",
+      "userEmail": "imra@test.com",
+      "action": "USER_REGISTER",
+      "details": "Created entrepreneur account for Imra",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T15:21:42.938Z"
+    },
+    {
+      "id": "aud_0882a7d4-ae44-420b-a7ac-a35c8ae674ed",
+      "userId": "usr_2f304630-0a32-48eb-b8ba-558502a46af2",
+      "userEmail": "iza@gmail.com",
+      "action": "USER_REGISTER",
+      "details": "Created entrepreneur account for iza",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T15:20:33.880Z"
+    },
+    {
+      "id": "aud_195d9dcd-7327-4d06-afcc-40c54fcc00c7",
+      "userId": "usr_46d58539-e277-4e2e-a082-fb8f05419fd8",
+      "userEmail": "founder_1783609440222@nexus-test.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T15:04:00.297Z"
+    },
+    {
+      "id": "aud_917b4ae9-254a-43a0-935c-8ae19501a103",
+      "userId": "usr_46d58539-e277-4e2e-a082-fb8f05419fd8",
+      "userEmail": "founder_1783609440222@nexus-test.com",
+      "action": "USER_REGISTER",
+      "details": "Created entrepreneur account for Test Founder",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T15:04:00.280Z"
+    },
+    {
+      "id": "aud_9af1a2ab-f68e-4f1a-97e2-f11dc5f7529c",
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "userEmail": "imratanveer21@gmail.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T12:13:22.475Z"
+    },
+    {
+      "id": "aud_1bf43b1f-1e4e-455b-a00d-fa053153a247",
+      "userId": "usr_entrepreneur_1",
+      "userEmail": "entrepreneur@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T10:19:49.003Z"
+    },
+    {
+      "id": "aud_38826552-1819-4c9e-8cc7-616f449fe896",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T10:19:36.807Z"
+    },
+    {
+      "id": "aud_fc84895a-94ee-4903-81c9-aac1eb2b30a4",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T10:19:33.451Z"
+    },
+    {
+      "id": "aud_5e7f39d9-f343-4a5f-bb79-98fab652d81c",
+      "userId": "usr_entrepreneur_1",
+      "userEmail": "entrepreneur@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T10:19:30.173Z"
+    },
+    {
+      "id": "aud_28abc6d5-91fe-4bbf-b2fa-4e3095aa45d3",
+      "userId": "usr_admin",
+      "userEmail": "admin@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T10:19:26.287Z"
+    },
+    {
+      "id": "aud_583d5aba-8161-49d8-b57d-e5bbdda6e818",
+      "userId": "usr_entrepreneur_1",
+      "userEmail": "entrepreneur@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T10:19:20.511Z"
+    },
+    {
+      "id": "aud_ee525332-5782-45e8-a0e4-6715e55570a9",
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "userEmail": "imratanveer21@gmail.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T10:15:33.513Z"
+    },
+    {
+      "id": "aud_f4d838bd-21ab-4054-8530-a212a5b9bf1b",
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "userEmail": "imratanveer21@gmail.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-09T10:12:01.685Z"
+    },
+    {
+      "id": "aud_097ef59b-83c8-461c-8fe7-4a27ac03190c",
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "userEmail": "imratanveer21@gmail.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T18:44:01.069Z"
+    },
+    {
+      "id": "aud_17e22ddd-e852-4b8f-9fc1-ff28ded3fcdc",
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "userEmail": "imratanveer21@gmail.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T18:43:41.106Z"
+    },
+    {
+      "id": "aud_00dd7829-8fe9-40f5-bf0d-ed555d0d1143",
+      "userId": "usr_e688e912-6f73-44dd-87d4-72fba611d12c",
+      "userEmail": "imratanveer21@gmail.com",
+      "action": "USER_REGISTER",
+      "details": "Created entrepreneur account for imra",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T18:43:31.552Z"
+    },
+    {
+      "id": "aud_c8028188-282b-4c0e-9da3-d92b1d48f182",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T18:42:48.368Z"
+    },
+    {
+      "id": "aud_2b0b4766-29b1-4ef1-8896-a349ec25412d",
+      "userId": "usr_0edb9922-27bf-415d-afe1-d195594d6e2d",
+      "userEmail": "founder_1783536146538@nexus-test.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T18:42:26.831Z"
+    },
+    {
+      "id": "aud_dbc780ae-1fc7-4823-8fc6-f232bbfc95fd",
+      "userId": "usr_0edb9922-27bf-415d-afe1-d195594d6e2d",
+      "userEmail": "founder_1783536146538@nexus-test.com",
+      "action": "USER_REGISTER",
+      "details": "Created entrepreneur account for Test Founder",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T18:42:26.766Z"
+    },
+    {
+      "id": "aud_3aaa9059-64ca-4786-b3fd-0ea4f532c07c",
+      "userId": "usr_entrepreneur_1",
+      "userEmail": "entrepreneur@nexus.com",
+      "action": "AI_PITCH_ANALYZE",
+      "details": "Executed AI Pitch Matchmaker analysis",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T18:33:40.699Z"
+    },
+    {
+      "id": "aud_913dc692-fe2c-4b53-bf34-6c192d1e473d",
+      "userId": "usr_entrepreneur_1",
+      "userEmail": "entrepreneur@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T18:32:59.764Z"
+    },
+    {
+      "id": "aud_9569bd2e-d24b-4850-ad28-c737f12f472e",
+      "userId": "usr_entrepreneur_1",
+      "userEmail": "entrepreneur@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:17:27.879Z"
+    },
+    {
+      "id": "aud_c0f6e89f-234c-40b1-837b-70d1a4e005ba",
+      "userId": "usr_entrepreneur_1",
+      "userEmail": "entrepreneur@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:16:44.220Z"
+    },
+    {
+      "id": "aud_08778eb8-a0bd-4661-bef0-37c2bb15cd8d",
+      "userId": "usr_admin",
+      "userEmail": "admin@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:16:42.555Z"
+    },
+    {
+      "id": "aud_0b90be23-56d1-4a5b-8e9a-1bf244da3c03",
+      "userId": "usr_entrepreneur_1",
+      "userEmail": "entrepreneur@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:16:40.683Z"
+    },
+    {
+      "id": "aud_eb8e2315-7b7c-47bd-8ee9-7672191441d6",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:16:39.529Z"
+    },
+    {
+      "id": "aud_59cb208c-74e0-42c1-a6b5-ff5e018be294",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:16:38.373Z"
+    },
+    {
+      "id": "aud_2e1957ef-6314-4150-8252-556053b8a0ad",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:16:37.283Z"
+    },
+    {
+      "id": "aud_b52e4fbb-bf6f-4360-a1fb-34406da58b41",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:16:36.034Z"
+    },
+    {
+      "id": "aud_5f0b09f7-12f8-4e80-a07a-d91870a8b71b",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:16:33.874Z"
+    },
+    {
+      "id": "aud_a94645f4-cc8b-4d09-aa98-52e09d1ffc2f",
+      "userId": "usr_investor_1",
+      "userEmail": "investor@nexus.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-08T16:15:57.130Z"
+    },
+    {
+      "id": "aud_b19b1a5d-2030-46a7-bbfc-12a3fafaca78",
+      "userId": "usr_f2e909a3-eef2-4b4a-8223-02cb08fb2209",
+      "userEmail": "founder_1783446161433@nexus-test.com",
+      "action": "USER_LOGIN",
+      "details": "Logged into application dashboard",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-07T17:42:41.523Z"
+    },
+    {
+      "id": "aud_1abf584e-d25a-4c9b-acdc-63e9fd007316",
+      "userId": "usr_f2e909a3-eef2-4b4a-8223-02cb08fb2209",
+      "userEmail": "founder_1783446161433@nexus-test.com",
+      "action": "USER_REGISTER",
+      "details": "Created entrepreneur account for Test Founder",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-07T17:42:41.508Z"
+    },
+    {
+      "id": "aud_seed",
+      "userId": "usr_admin",
+      "userEmail": "admin@nexus.com",
+      "action": "SYSTEM_SEED",
+      "details": "Nexus premium platform successfully seeded with initial accounts.",
+      "ip": "127.0.0.1",
+      "createdAt": "2026-07-07T17:39:35.337Z"
+    }
+  ],
+  "rtcSignaling": {}
+}

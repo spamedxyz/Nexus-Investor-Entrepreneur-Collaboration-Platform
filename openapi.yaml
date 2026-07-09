@@ -1,0 +1,311 @@
+openapi: 3.0.3
+info:
+  title: Nexus SaaS Collaboration Engine API
+  description: >
+    Production-grade API specification for the Nexus platform.
+    Connects investors and entrepreneurs via digital wallets, secure e-signatures, WebRTC signaling, and Gemini AI matchmaking.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Development Server
+  - url: https://api.nexus.com
+    description: Production Sandbox Server
+paths:
+  /api/health:
+    get:
+      summary: Health Check
+      description: Verifies application runtime and database connectivity.
+      responses:
+        '200':
+          description: Service is fully functional
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  time:
+                    type: string
+                    format: date-time
+                  database:
+                    type: string
+                    example: resilient_local_json
+
+  /api/auth/register:
+    post:
+      summary: Account Registration
+      description: Registers a new admin, investor, or entrepreneur.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+                - role
+                - name
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                role:
+                  type: string
+                  enum: [admin, investor, entrepreneur]
+                name:
+                  type: string
+                industry:
+                  type: string
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                  user:
+                    type: object
+                  profile:
+                    type: object
+                  wallet:
+                    type: object
+        '400':
+          description: Missing or invalid registration fields
+        '409':
+          description: Email already in use
+
+  /api/auth/login:
+    post:
+      summary: User Authentication
+      description: Signs in with email and password to retrieve a JWT token.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                  user:
+                    type: object
+                  profile:
+                    type: object
+                  wallet:
+                    type: object
+        '401':
+          description: Invalid email or password
+
+  /api/auth/me:
+    get:
+      summary: Get Current User Session
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Current user profile and wallet
+        '401':
+          description: Unauthorized session
+
+  /api/profiles:
+    get:
+      summary: Get Profiles
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: role
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [investor, entrepreneur, admin]
+        - name: industry
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: q
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Matching visual profile cards list
+
+  /api/profile:
+    put:
+      summary: Update Profile
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Profile updated successfully
+
+  /api/meetings:
+    get:
+      summary: List My Meetings
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: List of scheduled meetings
+    post:
+      summary: Schedule a Video Briefing
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - receiverId
+                - title
+                - date
+                - startTime
+                - duration
+              properties:
+                receiverId:
+                  type: string
+                title:
+                  type: string
+                description:
+                  type: string
+                date:
+                  type: string
+                  format: date
+                startTime:
+                  type: string
+                  example: "10:00"
+                duration:
+                  type: integer
+                  example: 30
+      responses:
+        '201':
+          description: Meeting requested successfully
+        '409':
+          description: Overlap / Scheduling conflict detected
+
+  /api/wallet:
+    get:
+      summary: Get Wallet Ledger & Quick History
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Current wallet balance and summary list
+
+  /api/wallet/transactions:
+    get:
+      summary: Complete Transaction History List
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Array of formatted ledger logs
+
+  /api/wallet/deposit:
+    post:
+      summary: Stripe Simulated Deposit
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - amount
+              properties:
+                amount:
+                  type: number
+      responses:
+        '200':
+          description: Deposit confirmed
+
+  /api/wallet/transfer:
+    post:
+      summary: Deploy Venture Capital
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - targetUserId
+                - amount
+              properties:
+                targetUserId:
+                  type: string
+                amount:
+                  type: number
+                message:
+                  type: string
+      responses:
+        '200':
+          description: Ledger capital injection executed successfully
+
+  /api/ai/match:
+    post:
+      summary: Gemini Pitch Alignment Analysis
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - pitch
+              properties:
+                pitch:
+                  type: string
+                goals:
+                  type: string
+      responses:
+        '200':
+          description: High-fidelity VC evaluation analysis from Gemini 3.5
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

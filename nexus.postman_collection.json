@@ -1,0 +1,274 @@
+{
+  "info": {
+    "_postman_id": "c1f618a8-44fa-4b82-8419-48281ea42ff9",
+    "name": "Nexus Collaboration Platform",
+    "description": "Ready-to-use Postman Collection for the Nexus full-stack platform. Includes health checks, auth flows, ledger wallets, video call scheduling, and AI matchmakers.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Infrastructure",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/health",
+              "host": ["{{base_url}}"],
+              "path": ["api", "health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"founder@example.com\",\n  \"password\": \"nexus123\",\n  \"role\": \"entrepreneur\",\n  \"name\": \"David Webb\",\n  \"industry\": \"SaaS\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/register",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "register"]
+            }
+          }
+        },
+        {
+          "name": "Login Session",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();",
+                  "if (response.token) {",
+                  "    pm.environment.set(\"jwt_token\", response.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"founder@example.com\",\n  \"password\": \"nexus123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "login"]
+            }
+          }
+        },
+        {
+          "name": "Get Current User Session",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/auth/me",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "me"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Collaboration & Meetings",
+      "item": [
+        {
+          "name": "Schedule Briefing",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"receiverId\": \"usr_investor_1\",\n  \"title\": \"Series Seed Core Pitch Review\",\n  \"description\": \"Initial review of technical architectures and secure pipeline.\",\n  \"date\": \"2026-07-15\",\n  \"startTime\": \"14:30\",\n  \"duration\": 30\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/meetings",
+              "host": ["{{base_url}}"],
+              "path": ["api", "meetings"]
+            }
+          }
+        },
+        {
+          "name": "Get My Scheduled Meetings",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/meetings",
+              "host": ["{{base_url}}"],
+              "path": ["api", "meetings"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wallets & Ledgers",
+      "item": [
+        {
+          "name": "Get Wallet Balances",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/wallet",
+              "host": ["{{base_url}}"],
+              "path": ["api", "wallet"]
+            }
+          }
+        },
+        {
+          "name": "Stripe Sandbox Deposit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"amount\": 250000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/wallet/deposit",
+              "host": ["{{base_url}}"],
+              "path": ["api", "wallet", "deposit"]
+            }
+          }
+        },
+        {
+          "name": "Transfer Investment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targetUserId\": \"usr_entrepreneur_1\",\n  \"amount\": 150000,\n  \"message\": \"Vanguard Seed backing into OmniMind AI\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/wallet/transfer",
+              "host": ["{{base_url}}"],
+              "path": ["api", "wallet", "transfer"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI Services",
+      "item": [
+        {
+          "name": "Gemini AI Pitch Matchmaker",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pitch\": \"We run lightweight LLMs secure inside local enterprise perimeters for regulated industries like healthcare and banking.\",\n  \"goals\": \"Raise $1.5M Seed round\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/ai/match",
+              "host": ["{{base_url}}"],
+              "path": ["api", "ai", "match"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}

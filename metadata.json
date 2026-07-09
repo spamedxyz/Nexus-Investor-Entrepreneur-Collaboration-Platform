@@ -1,0 +1,6 @@
+{
+  "name": "Nexus - Investor & Entrepreneur Collaboration Platform",
+  "description": "A premium SaaS platform that connects investors and entrepreneurs, enabling collaboration, meeting scheduling, WebRTC video calling, secure document signing, wallet management, and AI matchmaking.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
