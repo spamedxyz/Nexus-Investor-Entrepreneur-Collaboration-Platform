@@ -26,7 +26,12 @@ import {
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = parseInt(process.env.PORT || "3000", 10);
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Nexus Full-Stack platform running on port ${PORT}`);
+});
+
 const JWT_SECRET = process.env.JWT_SECRET || 'nexus_super_secret_master_key_2026';
 
 // Request JSON parsing
