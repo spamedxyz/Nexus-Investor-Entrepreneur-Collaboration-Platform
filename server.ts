@@ -25,12 +25,8 @@ import {
 
 dotenv.config();
 
-const app = express();
+export const app = express();
 const PORT = parseInt(process.env.PORT || "3000", 10);
-
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Nexus Full-Stack platform running on port ${PORT}`);
-});
 
 const JWT_SECRET = process.env.JWT_SECRET || 'nexus_super_secret_master_key_2026';
 
@@ -1395,29 +1391,30 @@ app.post('/api/ai/match', authenticateToken, async (req: any, res) => {
 // -------------------------------------------------------------
 // Vite Dev & Production Client Delivery
 // -------------------------------------------------------------
+
+
 async function startServer() {
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
-      appType: 'spa',
+      appType: "spa",
     });
+
     app.use(vite.middlewares);
   } else {
-    const distPath = path.join(process.cwd(), 'dist');
+    const distPath = path.join(process.cwd(), "dist");
+
     app.use(express.static(distPath));
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
+
+    app.get("*", (_, res) => {
+      res.sendFile(path.join(distPath, "index.html"));
     });
   }
 
-  const testPort = process.env.NODE_ENV === 'test' ? 3001 : PORT;
-  app.listen(testPort, '0.0.0.0', () => {
-    console.log(`Nexus Full-Stack platform running on http://localhost:${testPort}`);
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on ${PORT}`);
   });
 }
-
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== "test") {
   startServer();
 }
-
-export { app, startServer };
